@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "gatsby develop",
+    "start":"node ./src/bin/www",
   "build": "gatsby build",
   "test": "jest"
   },
