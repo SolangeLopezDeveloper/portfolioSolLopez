@@ -4,12 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop",
+  "build": "gatsby build",
+  "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "gatsby": "^5.9.1",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-sharp": "^5.9.0"
   }
 }
