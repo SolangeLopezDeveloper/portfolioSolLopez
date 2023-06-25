@@ -47,21 +47,26 @@
   a:hover {
     color: var(--secondary-color);
   }
-  
+
   body {
     font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
   }
-nav {
-    position: sticky;
+.tituloPrincipal {
+  position: sticky;
     top: 0;
     left: 0;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1.5rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    align-items: center; 
   }
   nav h1 {
     color: var(--color-primario);
@@ -69,12 +74,12 @@ nav {
   
   nav a {
     color: var(--color-primario);
-    transition: var(--transicion);
+     transition: var(--transicion); 
   }
   nav a:hover {
-    color: var(--valor-secundario);
-    border-bottom: 2px solid var(--valor-secundario);
-  }
+    color: var(--primary-color);
+    border-bottom: 2px solid ;
+  } 
   
   nav ul {
     display: flex;
@@ -82,16 +87,21 @@ nav {
   }
   
   nav ul li {
-    font-weight: var(--negrita);
+    font-weight: var(--bolder-font);
   }
-  .menu-hamburguesa {
+/*   .navegacion {
     color: var(--primary-color);
     font-size: 2rem;
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    display: none;
-  }
+    
+    
+  } */
+ /*  .navegacion{
+    display: flex;
+    
+  } */
   .hero {
     display: flex;
     align-items: center;
@@ -104,12 +114,19 @@ nav {
     height: 37.5rem;
     width: 37.5rem;
   }
-  
+  .imagen-hero{
+    margin-top: 10px;
+  }
   .bio {
-    width: 25rem;
-    padding: 0.625rem;
+    display: flex;
+    /* width: 25rem; */
+    margin: 5rem;
+    padding: 2rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
   }
   
   .bio h1 {
@@ -118,7 +135,6 @@ nav {
   
   .bio p {
     line-height: var(--line-height);
-    padding: 0.3rem 0;
   }
   .mas-sobre {
     background-color: var(--bg-color);
@@ -166,6 +182,8 @@ nav {
     padding: 0px 0;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
   }
   
   .foto-de-proyecto {
@@ -178,8 +196,9 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 80%;
+    width: 40%;
     padding: 1rem;
+    flex-direction: row;
   }
   
   .contenedor-de-proyectos img{
@@ -198,6 +217,7 @@ nav {
   
    .titulo-de-proyectos {
     margin-bottom: var(--bottom-margin);
+    text-align: center;
   } 
   
   .detalles-de-proyecto {
@@ -304,33 +324,77 @@ nav {
  flex-direction: column;
  align-items: center;
  }
-  @media screen and (max-width: 720px) {
-    nav {
+@media (max-width:768) {
+  .sociales {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 90%;
+    bottom: 10%;
+}
+.bar{
+  display: none;
+}
+}
+ @media (max-width:426px) {
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+    .tituloPrincipal {
         padding: 
         1.5rem 1rem;
+        position: sticky;
       }
       nav ul {
         position: fixed;
         background-color: var(--bg-color);
         flex-direction: column;
-        top: 86px;
-        left: 10%;
-        width: 80%;
+        top: 130px;
+        left: -10%;
+        width: 50%;
         text-align: center;
-        transform: translateX(120%);
+        /*     transform: translateX(120%); */
         transition: transform 0.5s ease-in;
       }
     
        nav ul li {
         margin: 8px;
       }
-      .menu-hamburguesa {
+      .menu-toggle {
         display: block;
+        font-size: 35px;
+        width: 15%;
+        color: black;
+        border: none;
+        border-radius: 10%;
+        margin-top: 20px;
       }
-    
+      .menu-toggle:hover{
+
+      }
+      .menu{
+      display: none;
+      margin-top: 50px;
+      }
+      .menu.active{
+        display: block;
+   
+      }
+
+   /*  
       nav ul.show {
         transform: translateX(0);
-      }
+      } */
       .hero {
         margin-top: -4rem;
         flex-direction: column;
@@ -362,35 +426,18 @@ nav {
         width: 5.875rem;
         height: 5.25rem;
       }
-      .contenedor-proyectos {
+      .contenedor-de-proyectos {
+        display: flex;
         flex-direction: column;
       }
     
       .contenedor-proyecto {
-        width: 20.875rem;
+
       }
       .contenedor-formulario-de-contacto {
         max-width: 23.75rem;
       }
   }
-  @media screen and (max-width: 420px) {
-    .hero img {
-      height: 37.5rem;
-      width: 23rem;
-    }
-  
-    .bio {
-      width: 18.3rem;
-    }
-  
-    .contenedor-proyecto {
-      width: 17.875rem;
-    }
-  
-    .contenedor-formulario-de-contacto{
-      max-width: 17.75rem;
-    }
-  } 
   
 
 

@@ -3,7 +3,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--Estilos CSS -->
+    <script src="https://kit.fontawesome.com/95086d397a.js" crossorigin="anonymous"></script>
+    <!--Estilos CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
   
     <!-- Animaciones CSS CDN -->
@@ -11,33 +12,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <title>Solange López | Desarrolladora Web Full Stack</title>
   </head>
 
   <body>
     <!-- Barra de Navegación -->
-    <nav>
-        <h1>Solange López | Desarrolladora Web Full Stack</h1>
-      </nav>
-      <nav>
-        <ul class="navegacion">
+   <nav><h1 class="tituloPrincipal">Solange López | Desarrolladora Web Full Stack</h1>
+  
+    <button class="menu-toggle" id="menu-toggle">
+      <div class="bar"><i class="fa-solid fa-bars"></i></div>
+    </button>
+  </nav>
+        
+  
+    
+      <nav class="menu" id="menu">
+        <ul class="navegacion" id="burguer-menu">
           <li><a href="#sobremi" class="nav-link">Acerca de Mí</a></li>
           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
-      
       </nav>
+
+         <!-- Sección de redes sociales - Fijado a la derecha -->
+       <div class="sociales">
+        <a href="https://wa.me/1136546271" target="_blank"
+          ><img
+            src="/icons/icons8-whatsapp.gif"
+            alt="wsp"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://www.linkedin.com/in/solange-lopez-498165255/" target="_blank"
+          ><img
+            src="/icons/icons8-linkedin-circled.gif"
+            alt="Linkedin"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://github.com/SolangeLopezDeveloper" target="_blank"
+          ><img src="/icons/icons8-github.gif" alt="Github" class="socicon"
+        /></a>
+        </div>
     <!-- Sección Hero  -->
     <section class="hero" id="about">
+      <div class="imagen-hero">
         <img
           src="./images/developerSolLopez.jpg"
           alt="sol-lopez"
           loading="lazy"
           class="hero-img"
         />
+      </div>
         <div class="bio animate__animated animate__shakeX">
-          <h2 class="bio-titulo">Sobre Mí</h2>
+          <h2 class="bio-titulo" id="sobremi">Sobre Mí</h2>
           <p class="bio-texto">
             Soy una mujer decidida, emprendedora, imparable!
             Disfruto de trabajar en equipo, me apasiona la mente humana.
@@ -180,32 +210,14 @@ Todas las marcas, los mejores precios!</p>
         
      
       </section>
-    <!-- Sección de redes sociales - Fijado a la derecha -->
-    <div class="sociales">
-        <a href="https://wa.me/1136546271" target="_blank"
-          ><img
-            src="/icons/icons8-whatsapp.gif"
-            alt="wsp"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="https://www.linkedin.com/in/solange-lopez-498165255/" target="_blank"
-          ><img
-            src="/icons/icons8-linkedin-circled.gif"
-            alt="Linkedin"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="https://github.com/SolangeLopezDeveloper" target="_blank"
-          ><img src="/icons/icons8-github.gif" alt="Github" class="socicon"
-        /></a>
+ 
+   
     <!-- Vuelve al comienzo  -->
-    <i class="desplazarse-hacia-arriba" id="desplazarse-hacia-arriba"
-    ><img
+    <a href="#"><i class="desplazarse-hacia-arriba"><img
       src="/icons/icons8-upward-arrow.gif"
       class="socicon up-arrow"
-      alt="desplazarse-hacia-arriba"
-  /></i>
+      alt="desplazarse-hacia-arriba"/></i></a>
+   
   
     <!-- Sección Footer  -->
     <footer>
@@ -229,5 +241,6 @@ Todas las marcas, los mejores precios!</p>
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="/js/javascripts.js"></script>
   </body>
 </html>
