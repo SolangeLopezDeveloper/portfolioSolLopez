@@ -26,10 +26,14 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );  */
-const menuToggle = document.getElementById('menu-toggle');
+/* const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 menuToggle.addEventListener("click", function() {
   // Toggle (alternar) la clase "active" en el 
  
   menu.classList.toggle("active");
-});
+}); */
+function toggleMenu(){
+  const navbarMenu = document.getElementById("navbar-menu")
+  navbarMenu.classList.toggle("show")
+}
