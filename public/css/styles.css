@@ -436,6 +436,7 @@ footer {
   .contenedor-de-proyectos {
     display: flex;
     flex-direction: row;
+    
 
   }
   .contenedor-de-proyectos img{
@@ -447,7 +448,9 @@ footer {
 .contenedor-habilidades img{
 width: 8rem;
 }
-  .contenedor-proyecto {}
+  .proyectos {
+    margin: 100px;
+  }
 
   .contenedor-formulario-de-contacto {
     max-width: 23.75rem;
