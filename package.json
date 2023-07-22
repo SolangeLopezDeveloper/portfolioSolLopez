@@ -2,9 +2,9 @@
   "name": "portfoliosollopez",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.html",
     "build": "gatsby build",
     "test": "jest"
   },
