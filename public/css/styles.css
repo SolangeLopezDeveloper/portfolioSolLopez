@@ -49,7 +49,6 @@ body {
 
  .navbar-brand-title{
   background: none;
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
@@ -173,16 +172,17 @@ body {
 }
 
 .habilidades {
-  max-width: 68.75rem;
-  margin: auto;
-  text-align: center;
-  margin-top: 2.5rem;
+  display: flex;
+ flex-wrap: wrap;
 }
 
 .header-habilidades {
   margin-bottom: 1rem;
 }
-
+.contenedor-habilidades{
+  display: flex;
+  flex-wrap: wrap;
+}
 .contenedor-habilidades img {
  width: 4rem;
 }
@@ -388,7 +388,42 @@ footer {
   align-items: center;
 }
 
+.icon-span{
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
 
+ }
+ .icon-card{
+  margin-top: 10px;
+  transition: opacity 3s ease;
+  width: 40%;
+ }
+
+.contenedor-habilidades{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+}
+.first-set{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-set {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.contenedor-de-estudios:hover{
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
 
 @media (min-width:426px) {
 .body{
@@ -488,6 +523,9 @@ width: 8rem;
 }
   .proyectos {
     margin: 100px;
+  }
+  .habilidades{
+    justify-content: center;
   }
 }
 @media (min-width:768px) {
