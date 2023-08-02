@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Josefin+Sans:wght@300;400;600;700&display=swap');
 @import './bootstrap.min.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,900;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,700&display=swap');
 
 :root {
   --normal-font: 400;
@@ -17,6 +17,7 @@
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
+  --principal-font: 'Nunito Sans'
 }
 html {
   scroll-behavior: smooth;
@@ -37,7 +38,7 @@ a:hover {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--principal-font);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -156,7 +157,6 @@ body {
 .mas-sobre {
   margin-top: 10px;
   list-style-type: circle;
-
   padding: 1rem;
 }
 
@@ -166,9 +166,10 @@ body {
   margin-top: 0.5rem;
 }
 
-.mas-sobre h2 {
+.title_masSobreMi {
   margin-bottom: var(--bottom-margin);
   text-align: center;
+  box-shadow: 0 3px 10px var(--primary-shadow);
 }
 
 .habilidades {
@@ -178,12 +179,12 @@ body {
   margin-top: 2.5rem;
 }
 
-.encabezado-habilidad {
+.header-habilidades {
   margin-bottom: 1rem;
 }
 
-.contenedor-habilidad img {
-  padding: 1.25rem;
+.contenedor-habilidades img {
+ width: 4rem;
 }
 
 .icono {
@@ -204,6 +205,24 @@ body {
 .estudios{
 width: 100%;
   color: #ffffff;
+  font-family: var(--principal-font);
+
+}
+.contenedor-de-estudios{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  margin-top: 15px;
+
+
+}
+.contenedor-de-estudios p{
+font-weight:lighter;
+}
+.contenedor-de-estudios h3{
+  font-weight: bold;
 }
 
 .proyectos {
@@ -253,14 +272,19 @@ width: 100%;
   margin-bottom: var(--bottom-margin);
 }
 
-.tarjeta-de-proyecto {
+.contenedor-de-proyectos--tarjeta-de-proyecto {
   
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
-  /*  padding: 20px;
-    margin: 10px; */
+ padding: 20px;
+     /*  margin: 10px; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.contenedor-de-proyectos--tarjeta-de-proyecto:hover {
+  box-shadow: 5px 5px 10px #fff;
+
 }
 
 .contacto {
@@ -367,7 +391,9 @@ footer {
 
 
 @media (min-width:426px) {
-
+.body{
+  font-family: var(--principal-font);
+}
   .navbar {
     color: #000;
     padding: 12px;
@@ -421,7 +447,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         padding: 25px;
-        border: #000 solid 1px;
+
         border-radius: 5px;
         width: 800px;
         
@@ -434,13 +460,17 @@ footer {
        display: flex;
        flex-wrap: wrap;
        background: none;
+       justify-content: space-evenly;
       }
-    .estudios li{
-      width: 100%;
-    }
-    .estudios p{
-      width: 20%;
-    }
+.contenedor-de-estudios{
+  width: 40%;
+  border-top: 1px solid #fff;
+  border-right: 1px solid var(--primary-color);
+  border-bottom: none;
+padding: 15px;
+border-radius: 15px;
+}
+ 
   .contenedor-de-proyectos {
     display: flex;
     flex-direction: row;
@@ -459,10 +489,6 @@ width: 8rem;
   .proyectos {
     margin: 100px;
   }
-
-  .contenedor-formulario-de-contacto {
-    max-width: 23.75rem;
-  }
 }
 @media (min-width:768px) {
   .hero img{
@@ -473,4 +499,61 @@ width: 8rem;
   .navbar-brand-title{
     width: 100%;
   }
+  .contenedor-de-proyectos{
+    gap: 18px;
+  }
+  .contenedor-de-proyectos--tarjeta-de-proyecto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 5px;
+  }
+  .estudios{
+    display: flex;
+width: 100%;
+  }
+  .mas-sobre{
+    width: 100%;
+  }
+ .icon-span{
+  display: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+
+ }
+ .icon-card{
+  margin-top: 50px;
+  transition: opacity 3s ease;
+ }
+ .icon-card:hover + .icon-span {
+  display: block;
+  opacity: 1;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
+.contenedor-habilidades{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+
+}
+.first-set{
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-set {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.contenedor-de-estudios:hover{
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
 }
